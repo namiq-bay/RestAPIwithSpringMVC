@@ -3,7 +3,7 @@
 ## Using technologies
 
 - Spring Boot & MVC
-- H2 Embeded DB
+- H2 Embedded DB
 - JPA/Hibernate
 
 
@@ -129,3 +129,5 @@ PUT http://localhost:8080/rest/user/1
 DELETE http://localhost:8080/rest/user/1
 ```
 ---
+
+Visit my blog [kiberbloq.com](https://kiberbloq.com)
