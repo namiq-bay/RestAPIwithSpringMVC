@@ -5,6 +5,7 @@
 - Spring Boot & MVC
 - H2 Embedded DB
 - JPA/Hibernate
+- Maven
 
 
 
