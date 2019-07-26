@@ -12,12 +12,12 @@
 ### REST API User Endpoints 
 | HTTP Method | Request URI | Request Body | Response Body | HTTP Status |
 | ------ | ------ | ------ | ------ | ------ |
-| GET | /users | - | List < User > | 200/500 | 
-| GET | /user?ln=surname | - | List < User > | 200/500 | 
-| GET | /user/{id} | - | User | 200/404/500 |
-| POST | /user | User | URI | 201/500 | 
-| PUT | /user/{id} | User | - | 200/404/500 |
-| DELETE | /user/{id} | - | - | 200/404/500 |
+| GET | /rest/users | - | List < User > | 200/500 | 
+| GET | /rest/users?ln=surname | - | List < User > | 200/500 | 
+| GET | /rest/users/{id} | - | User | 200/404/500 |
+| POST | /rest/users | User | URI | 201/500 | 
+| PUT | /rest/users/{id} | User | - | 200/404/500 |
+| DELETE | /rest/users/{id} | - | - | 200/404/500 |
 
 ## Examples
 > This Get request returns all users
@@ -58,7 +58,7 @@ ___
 
 > This Get request returns the user that matches the id path variable
 ```sh
-GET http://localhost:8080/rest/user/1
+GET http://localhost:8080/rest/users/1
 ```
 > Here’s the JSON response
 ```sh
@@ -73,7 +73,7 @@ GET http://localhost:8080/rest/user/1
 ---
 > This Get request returns the users that matches the ln request parameter
 ```sh
-GET http://localhost:8080/rest/user?ln=Aliyev
+GET http://localhost:8080/rest/users?ln=Aliyev
 ```
 
 > Here’s the JSON response
@@ -92,7 +92,7 @@ GET http://localhost:8080/rest/user?ln=Aliyev
 > This Post request creates a new User object that corresponds to the User context sent in the request body
 
 ```sh
-POST http://localhost:8080/rest/user
+POST http://localhost:8080/rest/users
 
 ```
 > Here’s the JSON request body
@@ -107,13 +107,13 @@ POST http://localhost:8080/rest/user
 
 > Here’s the response header
 ```sh
-location     http://localhost:8080/rest/user/7
+location     http://localhost:8080/rest/users/7
 ```
 ---
 > User content sent by this Put request updates the User object that matches the id value in the Database.
 
 ```sh
-PUT http://localhost:8080/rest/user/1
+PUT http://localhost:8080/rest/users/1
 
 ```
 > Here’s the JSON request body
@@ -127,7 +127,7 @@ PUT http://localhost:8080/rest/user/1
 ---
 > This Delete request delete the User object that matches the id path variable
 ```sh
-DELETE http://localhost:8080/rest/user/1
+DELETE http://localhost:8080/rest/users/1
 ```
 ---
 
