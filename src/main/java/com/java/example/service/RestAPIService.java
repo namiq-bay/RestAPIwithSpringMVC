@@ -6,7 +6,6 @@ import com.java.example.exception.UserNotFoundException;
 import com.java.example.model.User;
 
 public interface RestAPIService {
-	List <User> findUsers();
 	List <User> findUsers(String lastName);
 	User findUser(Long id) throws UserNotFoundException;
 	

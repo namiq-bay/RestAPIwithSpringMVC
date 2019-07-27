@@ -23,14 +23,11 @@ public class RestAPIServiceImpl implements RestAPIService {
 	}
 
 	@Override
-	public List<User> findUsers() {
-
-		return userRepository.findAll();
-	}
-
-	@Override
 	public List<User> findUsers(String lastName) {
-		return userRepository.findByLastName(lastName);
+		if (lastName == null)
+			return userRepository.findAll();
+		else
+			return userRepository.findByLastName(lastName);
 	}
 
 	@Override
@@ -58,21 +55,4 @@ public class RestAPIServiceImpl implements RestAPIService {
 		userRepository.delete(id);
 
 	}
-
-//	void createTest() {
-//		User user = new User();
-//
-//		user.setId(9L);
-//		user.setFirstName("Test2");
-//		user.setLastName("User");
-//		user.setAge(23);
-//
-//		userRepository.create(user);
-//	}
-//
-//	public static void main(String[] args) {
-//		RestAPIServiceImpl obj = new RestAPIServiceImpl();
-//		obj.createTest();
-//	}
-
 }

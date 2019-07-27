@@ -20,28 +20,28 @@ import com.java.example.model.User;
 import com.java.example.service.RestAPIService;;
 
 @RestController
-@RequestMapping("/rest")
+@RequestMapping("/rest/users")
 public class SpringMVCRestController {
 
 	@Autowired
 	private RestAPIService restAPIService;
 
-	// get all users
-	@RequestMapping(value = "/users", method = RequestMethod.GET)
-	public ResponseEntity<List<User>> getUsers() {
-		List<User> users = restAPIService.findUsers();
-		return ResponseEntity.ok(users);
-	}
+// get all users
+//	@RequestMapping(value = "/users", method = RequestMethod.GET)
+//	public ResponseEntity<List<User>> getUsers() {
+//		List<User> users = restAPIService.findUsers();
+//		return ResponseEntity.ok(users);
+//	}
 
-	// get users by last name
-	@RequestMapping(value = "/user", method = RequestMethod.GET)
-	public ResponseEntity<List<User>> getUsers(@RequestParam("ln") String lastName) {
-		List<User> users = restAPIService.findUsers(lastName);
+	// get all users or by last name
+	@RequestMapping(method = RequestMethod.GET)
+	public ResponseEntity<List<User>> getUsers(@RequestParam(required = false) String ln) {
+		List<User> users = restAPIService.findUsers(ln);
 		return ResponseEntity.ok(users);
 	}
 
 	// get user by id
-	@RequestMapping(value = "/user/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<User> getUser(@PathVariable("id") Long id) {
 		try {
 			User user = restAPIService.findUser(id);
@@ -53,7 +53,7 @@ public class SpringMVCRestController {
 	}
 
 	// create user
-	@RequestMapping(value = "/user", method = RequestMethod.POST, produces = { "application/json" })
+	@RequestMapping(method = RequestMethod.POST, produces = { "application/json" })
 	public ResponseEntity<URI> createUser(@RequestBody User user) {
 		try {
 			restAPIService.createUser(user);
@@ -67,7 +67,7 @@ public class SpringMVCRestController {
 	}
 
 	// update user
-	@RequestMapping(value = "/user/{id}", method = RequestMethod.PUT)
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<?> updateUser(@PathVariable("id") Long id, @RequestBody User user) {
 		try {
 			User newUser = restAPIService.findUser(id);
@@ -87,7 +87,7 @@ public class SpringMVCRestController {
 	}
 
 	// delete user
-	@RequestMapping(value = "/user/{id}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<?> deleteUser(@PathVariable("id") Long id) {
 
 		try {
