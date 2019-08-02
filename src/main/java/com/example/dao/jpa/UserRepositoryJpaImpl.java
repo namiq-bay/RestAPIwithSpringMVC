@@ -1,4 +1,4 @@
-package com.java.example.dao.jpa;
+package com.example.dao.jpa;
 
 import java.util.List;
 
@@ -7,8 +7,8 @@ import javax.persistence.PersistenceContext;
 
 import org.springframework.stereotype.Repository;
 
-import com.java.example.dao.UserRepository;
-import com.java.example.model.User;
+import com.example.dao.UserRepository;
+import com.example.model.User;
 
 @Repository("userRepository")
 public class UserRepositoryJpaImpl implements UserRepository {

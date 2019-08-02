@@ -1,8 +1,8 @@
-package com.java.example.dao;
+package com.example.dao;
 
 import java.util.List;
 
-import com.java.example.model.User;
+import com.example.model.User;
 
 public interface UserRepository {
 	List<User> findAll();

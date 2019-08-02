@@ -1,4 +1,4 @@
-package com.java.example.service;
+package com.example.service;
 
 import java.util.List;
 
@@ -6,10 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.java.example.controller.SpringMVCRestController;
-import com.java.example.dao.UserRepository;
-import com.java.example.exception.UserNotFoundException;
-import com.java.example.model.User;
+import com.example.controller.SpringMVCRestController;
+import com.example.dao.UserRepository;
+import com.example.exception.UserNotFoundException;
+import com.example.model.User;
 
 @Service
 @Transactional

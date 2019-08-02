@@ -1,9 +1,9 @@
-package com.java.example.service;
+package com.example.service;
 
 import java.util.List;
 
-import com.java.example.exception.UserNotFoundException;
-import com.java.example.model.User;
+import com.example.exception.UserNotFoundException;
+import com.example.model.User;
 
 public interface RestAPIService {
 	List <User> findUsers(String lastName);

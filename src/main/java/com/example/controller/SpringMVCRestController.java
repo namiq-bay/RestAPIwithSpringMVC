@@ -1,4 +1,4 @@
-package com.java.example.controller;
+package com.example.controller;
 
 import java.net.URI;
 import java.util.List;
@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.java.example.exception.UserNotFoundException;
-import com.java.example.model.User;
-import com.java.example.service.RestAPIService;;
+import com.example.exception.UserNotFoundException;
+import com.example.model.User;
+import com.example.service.RestAPIService;;
 
 @RestController
 @RequestMapping("/rest/users")

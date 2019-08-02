@@ -33,3 +33,5 @@ build/
 .vscode/
 *.log
 *.gz
+*.log
+blog.log

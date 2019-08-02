@@ -1,4 +1,4 @@
-package com.java.example.RestAPITest;
+package com.example.RestAPITest;
 
 import java.net.URI;
 import java.util.List;
@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import com.java.example.model.User;
+import com.example.model.User;
 
 public class RestControllerTest {
 
